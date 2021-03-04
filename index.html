@@ -28,7 +28,7 @@
 
           <p>Sign Up Now</p>
 
-          <a href="" class="btn">Click Me</a>
+          <a href="" class="btn" id="btn">Click Me</a>
         </section>
 
         <!-- *...........Modal Section ...........* -->
@@ -48,5 +48,20 @@
         </section>
       </main>
     </div>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", e => {
+        e.preventDefault();
+
+        document.querySelector(".bg-modal").style.display = "flex";
+      });
+
+      document
+        .querySelector(".close")
+        .addEventListener(
+          "click",
+          () => (document.querySelector(".bg-modal").style.display = "none"),
+        );
+    </script>
   </body>
 </html>
